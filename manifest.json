@@ -1,0 +1,9 @@
+{
+  "id": "clearread-pdf",
+  "name": "ClearRead PDF",
+  "version": "0.3.0",
+  "minAppVersion": "1.5.0",
+  "description": "Dyslexia-friendly PDFs by substituting font data inside a cached copy. Native viewer, search, copy and images preserved. Math/symbol fonts kept original.",
+  "author": "Prashant Shrestha",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,21 @@
+{
+  "name": "clearread-pdf",
+  "version": "0.3.0",
+  "description": "Accessible PDF reading via font-data substitution",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.20.1",
+    "obsidian": "^1.5.7",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

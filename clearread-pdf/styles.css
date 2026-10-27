@@ -1,0 +1,138 @@
+.clearread-root {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--reader-background, var(--background-primary));
+  color: var(--reader-text-color, var(--text-normal));
+}
+
+.clearread-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: color-mix(
+    in srgb,
+    var(--background-secondary) 70%,
+    transparent
+  );
+  z-index: 20;
+}
+
+.clearread-toolbar-left,
+.clearread-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.clearread-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clearread-label {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.clearread-font-input {
+  min-width: 220px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.clearread-status {
+  padding: 8px 14px;
+  font-size: 0.9em;
+  opacity: 0.8;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.clearread-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 24px 16px 80px;
+}
+
+.clearread-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.clearread-page-shell {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+  border-radius: 16px;
+  transition: opacity 120ms ease;
+}
+
+.clearread-page {
+  max-width: var(--reader-max-width, 65ch);
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 16px;
+  font-family: var(--reader-font, sans-serif);
+  font-size: var(--reader-size, 20px);
+  line-height: var(--reader-line-height, 1.9);
+  letter-spacing: var(--reader-letter-spacing, 0.03em);
+  word-spacing: var(--reader-word-spacing, 0.12em);
+  color: var(--reader-text-color, var(--text-normal));
+  text-align: left;
+  hyphens: none;
+}
+
+.clearread-page-label {
+  font-size: 0.75em;
+  opacity: 0.55;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.clearread-page p {
+  margin: 0 0 var(--reader-paragraph-spacing, 1.4em) 0;
+}
+
+.clearread-page h2 {
+  margin: 1.2em 0 0.6em;
+  font-size: 1.25em;
+  line-height: 1.35;
+}
+
+.clearread-focus-mode .clearread-page-shell {
+  opacity: 0.35;
+}
+
+.clearread-focus-mode .clearread-page-shell.clearread-active {
+  opacity: 1;
+  outline: 2px solid rgba(120, 160, 255, 0.35);
+  outline-offset: 4px;
+}
+
+.clearread-ruler {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2.3em;
+  background: rgba(255, 214, 0, 0.14);
+  border-top: 1px solid rgba(255, 214, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 214, 0, 0.35);
+  pointer-events: none;
+  display: none;
+  z-index: 50;
+}
+
+.clearread-toolbar button {
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+{
+  "id": "clearread-pdf",
+  "name": "ClearRead PDF",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Accessible PDF reading for dyslexia, ADHD, and diverse learners. Instant font switching, spacing controls, focus mode, and reading supports.",
+  "author": "Prashant Shrestha",
+  "isDesktopOnly": true
+}

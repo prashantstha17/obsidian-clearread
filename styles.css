@@ -1,0 +1,77 @@
+.clearread-bar {
+  position: absolute;
+  top: 44px;
+  right: 12px;
+  z-index: 100;
+  display: flex;
+  gap: 6px;
+  opacity: 0.9;
+}
+.clearread-bar:hover { opacity: 1; }
+.clearread-bar button {
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  pointer-events: auto;
+}
+
+/* Strong, unmistakable themes */
+.clearread-theme-dark canvas { filter: invert(1) hue-rotate(180deg); }
+.clearread-theme-dark .view-content, .clearread-theme-dark { background: #101010; }
+
+.clearread-theme-sepia canvas { filter: sepia(0.9) saturate(0.9) hue-rotate(-12deg) contrast(0.95); }
+.clearread-theme-sepia .view-content, .clearread-theme-sepia { background: #e8dcc0; }
+
+.clearread-theme-contrast canvas { filter: grayscale(1) contrast(2.4) brightness(1.05); }
+.clearread-theme-contrast .view-content, .clearread-theme-contrast { background: #ffffff; }
+
+.clearread-theme-gray canvas { filter: grayscale(1) contrast(1.35) brightness(0.92); }
+.clearread-theme-gray .view-content, .clearread-theme-gray { background: #cfcfcf; }
+
+/* Fast ruler overlay */
+.clearread-ruler-overlay {
+  position: fixed;
+  pointer-events: none;
+  z-index: 60;
+  display: none;
+  overflow: hidden;
+}
+.clearread-ruler-overlay .band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 56px;
+  background: rgba(255, 214, 0, 0.16);
+  border-top: 1px solid rgba(255, 214, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 214, 0, 0.45);
+  will-change: transform;
+}
+.clearread-ruler-overlay[data-mode="mask"] .band {
+  box-shadow: 0 0 0 100vmax rgba(10, 10, 10, 0.55);
+}
+
+/* Chooser modal */
+.clearread-search {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.clearread-list {
+  max-height: 55vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.clearread-row {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--background-modifier-border);
+}
+.clearread-row:hover { background: var(--background-modifier-hover); }
