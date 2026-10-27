@@ -44,7 +44,7 @@ ClearRead PDF is not yet in the Obsidian community plugin directory, so it is in
 ### Option A: Install from a release
 
 1. Go to the [latest release](https://github.com/prashantstha17/obsidian-clearread/releases/latest).
-2. Download `clearread-pdf-0.3.0.zip` (or the individual `main.js`, `manifest.json`, `styles.css`, and `AtkinsonHyperlegible-Regular.ttf` files).
+2. Download `clearread-pdf-0.3.0.zip`.
 3. Extract the zip into your vault's plugin folder so the path looks like:
    `your-vault/.obsidian/plugins/clearread-pdf/`
 4. Restart Obsidian, then go to **Settings → Community plugins**, turn off Restricted Mode if needed, and enable **ClearRead PDF**.
