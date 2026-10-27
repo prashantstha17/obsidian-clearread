@@ -1,5 +1,25 @@
+# Dependencies
 node_modules/
+
+# Build output
 main.js
 *.js.map
 pdf.worker.min.js
+
+# Generated distribution copy
+clearread-pdf/
+
+# Release artifacts
+*.zip
+dist/
+release/
+
+# Obsidian vault data
+.obsidian/
+clearread-cache/
+
+# OS / editor
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
