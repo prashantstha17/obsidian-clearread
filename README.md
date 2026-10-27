@@ -39,9 +39,17 @@ What changes in the **After** screenshot:
 
 **Requirements:** Obsidian 1.5.0 or newer. This plugin is desktop only.
 
-ClearRead PDF is installed manually. Build it from source and copy the output into your vault's plugin folder.
+ClearRead PDF is not yet in the Obsidian community plugin directory, so it is installed manually. You can use a release build or build it from source.
 
-### 1. Build the plugin
+### Option A: Install from a release
+
+1. Go to the [latest release](https://github.com/prashantstha17/obsidian-clearread/releases/latest).
+2. Download `clearread-pdf-0.3.0.zip` (or the individual `main.js`, `manifest.json`, `styles.css`, and `AtkinsonHyperlegible-Regular.ttf` files).
+3. Extract the zip into your vault's plugin folder so the path looks like:
+   `your-vault/.obsidian/plugins/clearread-pdf/`
+4. Restart Obsidian, then go to **Settings → Community plugins**, turn off Restricted Mode if needed, and enable **ClearRead PDF**.
+
+### Option B: Build from source
 
 ```bash
 git clone https://github.com/prashantstha17/obsidian-clearread.git
@@ -49,8 +57,6 @@ cd obsidian-clearread
 npm install
 npm run build
 ```
-
-### 2. Copy it into your vault
 
 Create the plugin folder inside your vault and copy the required files into it:
 
@@ -67,7 +73,7 @@ mkdir "C:\path\to\your\vault\.obsidian\plugins\clearread-pdf"
 copy main.js,manifest.json,styles.css,AtkinsonHyperlegible-Regular.ttf "C:\path\to\your\vault\.obsidian\plugins\clearread-pdf"
 ```
 
-### 3. Enable it
+### Enable it
 
 1. Restart Obsidian.
 2. Open **Settings → Community plugins**.
@@ -77,7 +83,9 @@ The first time you open a PDF, ClearRead builds a local cache; later opens are f
 
 ## Updating
 
-From your clone of the repository:
+**If you installed from a release:** download the latest release, replace the files in `your-vault/.obsidian/plugins/clearread-pdf/`, and reload Obsidian.
+
+**If you built from source:**
 
 ```bash
 git pull
